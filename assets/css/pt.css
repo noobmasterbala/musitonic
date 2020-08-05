@@ -1,0 +1,59 @@
+
+    body{
+        background-image: url("images/terms_bg.jpg");
+    }
+    p {
+        padding-right: 100px;
+        padding-left:100px;
+        margin:auto 30;
+        font-size: 25px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h1{
+        text-align: center; 
+        padding: 50 50;
+       
+        
+        color: white;
+        width: 100%;
+        
+        
+    }
+    ul{
+        padding-right: 200px;
+        padding-left: 200px;
+        font-size: 20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .images{
+        height: 400px;
+        width: 600px;
+        text-align: center;
+        display: inline-block;
+        padding:10 120;
+    }
+    .right{
+        float:right;
+    }
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      
+      .nav li {
+        float: left;
+      }
+      
+      .nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .nav li a:hover {
+        background-color: #333;
+      }
