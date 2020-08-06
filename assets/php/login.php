@@ -64,12 +64,12 @@ input[type="button"]{
 }
 </style>
 <div class="login">
-<form action="#" method="POST">
+<form action="includes/login.inc.php" method="post">
 <h1>Login</h1>
 <input type="email" name="email" id="email" placeholder="Email" required><br><br>
 <input type="password" name="password" id="password" placeholder="Password" required><br><br>
 <input type="submit" name="submit" id="submit">
-<input type="button" name="register" id="register" value="Register">
+<a href="register.php">Register</a>
 </form>
 </div>
 </body>
