@@ -20,19 +20,19 @@ session_start();
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="Contact.php">Contact</a></li>
-					<li><a href="#About">About</a></li>
-					<li><a href="#About">Services</a></li>
+					<li><a href="index.php#About">About</a></li>
+					<li><a href="index.php#About">Services</a></li>
 					<li><a href="Terms.php">Terms</a></li>
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
 				</ul>
-				<form action="includes/login.inc.php" method="post">
+				<form action="assets/includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
 					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
 					<button type="submit" name="login-submit">Login</button>
 					<br><a href="assets/php/register.php">Register</a>
 				</form>
-				<form action="includes/logout.inc.php" method="post">
+				<form action="assets/includes/logout.inc.php" method="post">
 					<button type="submit" name="logout-submit">Logout</button>
 				</form>
 				
