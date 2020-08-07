@@ -35,6 +35,7 @@ h1{
 input{
  width:250px;
  height:30px;
+ margin-top: 10px;
 }
 
 input[type="submit"]{
@@ -45,6 +46,7 @@ input[type="submit"]{
   border-radius: 3px;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
 
 }
 input[type="button"]{
@@ -63,11 +65,13 @@ input[type="button"]{
 <div class="login">
 <form action="welcome.php" method="POST">
 <h1>Register</h1>
-<input type="Name" name="Name" id="Name" placeholder="Name" required><br><br>
-<input type="email" name="email" id="email" placeholder="Email" required><br><br>
-<input type="password" name="password" id="password" placeholder="Password" required><br><br>
-<input type="phone" name="phone" id="phone" placeholder="Phone Number" required><br><br>
-<input type="submit" name="submit" id="submit">
+<form action="../incudes/register.inc.php" method="post">
+<input  type="text" name="uid"   placeholder="Username" required>
+<input  type="text" name="mail"   placeholder="Email" required>
+<input  type="text" name="mail"   placeholder="Phone Number" required>
+<input  type="password" name="pwd"   placeholder="Password" required>
+<input  type="password" name="pwd-repeat"   placeholder="Repeat Password" required>
+<input type="submit" name="register-submit" id="submit">
 </form>
 </div>
 </body>
