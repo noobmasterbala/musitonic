@@ -59,15 +59,15 @@
  
          <!-- Nav -->
          <nav id="menu">
-			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="Contact.html">Contact</a></li>
-				<li><a href="index.html#About">About</a></li>
-				<li><a href="index.html#About">Services</a></li>
-				<li><a href="Terms.html">Terms</a></li>
-				<li><a href="Privacy.html">Privacy</a></li>
-				<li><a href="Disclaimer.html">Disclaimer</a></li>
-			</ul>
+         <ul class="links">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="Contact.php">Contact</a></li>
+					<li><a href="index.php#About">About</a></li>
+					<li><a href="index.php#About">Services</a></li>
+					<li><a href="Terms.php">Terms</a></li>
+					<li><a href="Privacy.php">Privacy</a></li>
+					<li><a href="Disclaimer.php">Disclaimer</a></li>
+				</ul>
 		</nav>
  
          <!-- One -->
