@@ -18,13 +18,13 @@ session_start();
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="Contact.html">Contact</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="Contact.php">Contact</a></li>
 					<li><a href="#About">About</a></li>
 					<li><a href="#About">Services</a></li>
-					<li><a href="Terms.html">Terms</a></li>
-					<li><a href="Privacy.html">Privacy</a></li>
-					<li><a href="Disclaimer.html">Disclaimer</a></li>
+					<li><a href="Terms.php">Terms</a></li>
+					<li><a href="Privacy.php">Privacy</a></li>
+					<li><a href="Disclaimer.php">Disclaimer</a></li>
 				</ul>
 				<form action="includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
