@@ -35,7 +35,7 @@ if ( isset($_POST['register-submit'])){
     }
     else
     {
-        $sql="SELECT uidUsers FROM users WHERE uidUsers=?";
+        $sql="SELECT uidUsers FROM users WHERE uidUsers=?;";
         $stmt=mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$sql)){
                 header("Location: ../php/register.php?error=sqlerror");
@@ -44,6 +44,7 @@ if ( isset($_POST['register-submit'])){
         else{
                 mysqli_stmt_bind_param($stmt, "s", $username);
                 mysqli_stmt_execute($stmt);
+                echo mysqli_error($conn);
                 mysqli_stmt_store_result($stmt);
                 $resultcheck=mysqli_stmt_num_rows($stmt);
                 if($resultcheck>0){
@@ -53,7 +54,7 @@ if ( isset($_POST['register-submit'])){
                 }
                 else
                 {
-                    $sql="INSERT INTO users (uidUsers, emailUsers, phoneUsers, pwdUsers) VALUES (?,?,?,?)";
+                    $sql="INSERT INTO users (uidUsers, emailUsers, phoneUsers, pwdUsers) VALUES (?,?,?,?);";
                     $stmt=mysqli_stmt_init($conn);
                     if(!mysqli_stmt_prepare($stmt,$sql)){
                         header("Location: ../php/register.php?error=sqlerror");

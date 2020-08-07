@@ -24,8 +24,8 @@
 					<li><a href="Disclaimer.html">Disclaimer</a></li>
 				</ul>
 				<form action="includes/login.inc.php" method="post">
-					<input type="email" name="email" id="email" placeholder="Email" required><br><br>
-					<input type="password" name="password" id="password" placeholder="Password" required><br><br>
+					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
+					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
 					<button type="submit" name="login-submit">Login</button>
 					<br><a href="assets/php/register.php">Register</a>
 				</form>
