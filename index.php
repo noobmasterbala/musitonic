@@ -17,6 +17,12 @@ session_start();
 
 		<!-- Nav -->
 			<nav id="menu">
+                <?php
+                    if(isset($_SESSION['username'])){
+                        $u = $_SESSION['username'];
+                        echo "<p style='color:white'>Welcome $u</p>";
+                    }
+                ?>
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="Contact.php">Contact</a></li>
@@ -26,12 +32,13 @@ session_start();
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
 				</ul>
-				<form action="assets/includes/login.inc.php" method="post">
+				<form id="login_form" action="assets/includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
 					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
 					<button type="submit" name="login-submit">Login</button>
 					<br><a href="assets/php/register.php">Register</a>
 				</form>
+                
 				<form action="assets/includes/logout.inc.php" method="post">
 					<button type="submit" name="logout-submit">Logout</button>
 				</form>
@@ -238,6 +245,13 @@ session_start();
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+            <?php
+                if(isset($_SESSION['username'])){
+                    $u = $_SESSION['username'];
+                    echo "<script>$('#login_form').hide();</script>";
+                }
+            ?>
 
 	</body>
 </html>
