@@ -63,14 +63,13 @@ input[type="button"]{
 }
 </style>
 <div class="login">
-<form action="welcome.php" method="POST">
 <h1>Register</h1>
-<form action="../incudes/register.inc.php" method="post">
-<input  type="text" name="uid"   placeholder="Username" required>
-<input  type="text" name="mail"   placeholder="Email" required>
-<input  type="text" name="mail"   placeholder="Phone Number" required>
-<input  type="password" name="pwd"   placeholder="Password" required>
-<input  type="password" name="pwd-repeat"   placeholder="Repeat Password" required>
+<form action="../includes/register.inc.php" method="post">
+<input  type="text" name="uid"   placeholder="Username" >
+<input  type="text" name="mail"   placeholder="Email" >
+<input  type="text" name="phone"   placeholder="Phone Number">
+<input  type="password" name="pwd"   placeholder="Password" >
+<input  type="password" name="pwd-repeat"   placeholder="Repeat Password">
 <input type="submit" name="register-submit" id="submit">
 </form>
 </div>
