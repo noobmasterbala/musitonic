@@ -20,8 +20,8 @@ session_start();
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="Contact.php">Contact</a></li>
-					<li><a href="#About">About</a></li>
-					<li><a href="#About">Services</a></li>
+					<li><a href="index.php#About">About</a></li>
+					<li><a href="index.php#About">Services</a></li>
 					<li><a href="Terms.php">Terms</a></li>
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
