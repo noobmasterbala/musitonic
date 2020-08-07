@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -36,8 +39,6 @@
 
 
 			</nav>
-			<p>You are logged out</p>
-			<p>you are logged in</p>
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
