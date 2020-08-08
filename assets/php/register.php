@@ -61,9 +61,51 @@ input[type="button"]{
   margin-top:10px;
 
 }
+.error{
+  color: red;
+  align: center;
+}
+.signup{
+  color: green;
+  align: center;
+}
 </style>
 <div class="login">
 <h1>Register</h1>
+<?php
+if(isset($_GET['error'])){
+  if($_GET['error']=="emptyfields"){
+    echo '<p class="error"> Fill in all fields!</p>';
+  }
+  else if($_GET['error']=="invalidmailusername"){
+    echo '<p class="error"> Invalid Email and Username!</p>';
+
+  }
+  else if($_GET['error']=="invalidmail"){
+    echo '<p class="error"> Invalid Email!</p>';
+
+  }
+  else if($_GET['error']=="invalidusername"){
+    echo '<p class="error"> Invalid Username!</p>';
+
+  }
+  else if($_GET['error']=="passwordcheck"){
+    echo '<p class="error"> Password repeat does not match password!</p>';
+
+  }
+  else if($_GET['error']=="usernametaken"){
+    echo '<p class="error"> Username Taken!</p>';
+  
+  }
+ 
+}
+else if($_GET['signup']=="success"){
+  echo '<p class="signup"> Signup success!</p>';
+
+}
+
+
+?>
 <form action="../includes/register.inc.php" method="post">
 <input  type="text" name="uid"   placeholder="Username" >
 <input  type="text" name="mail"   placeholder="Email" >

@@ -8,6 +8,16 @@ session_start();
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+		.error{
+  color: red;
+  align: center;
+}
+.signup{
+  color: green;
+  align: center;
+}
+		</style>
 	</head>
 	<body>
 			<header id="header" class="alt">
@@ -40,6 +50,25 @@ session_start();
 			
                 }
                 else{
+					if(isset($_GET['error'])){
+						if($_GET['error']=="emptyfields"){
+						  echo '<p class="error"> Fill in all fields!</p>';
+						}
+						else if($_GET['error']=="wrongpwd"){
+						  echo '<p class="error">Wrong Password!</p>';
+					  
+						}
+						else if($_GET['error']=="nouser"){
+						  echo '<p class="error"> No user with this email please register!</p>';
+					  
+						}
+					   
+					  }
+					  else if($_GET['signup']=="success"){
+						echo '<p class="signup"> Signup success!</p>';
+					  
+					  }
+					  
                   
                 echo ' <form id="login_form" action="assets/includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
@@ -165,11 +194,11 @@ session_start();
 					<ul class="table-list">
 						<li>1 <span>Artist /band</span></li>
 						<li>60%<span>Royalties first year </span></li>
-						<li>65% <span>Royalties second year</span></li>
+						<li>65% <span>Royalties second year onwards</span></li>
 						<li>Unlimited <span>Releases </span></li>
 						
-						<li><span>Mixing & Mastering Rs.149 per track</span>(optional)</li>
-						<li><span>Album(more than 12 songs ) Rs.1440</span>(optional)</li>
+						<li><span>Distribution to all stores</span></li>
+						<li>No Commitments cancel anytime!</li>
 					</ul>
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
@@ -186,32 +215,30 @@ session_start();
 						<li>2 <span>Artists / Band</span></li>
 						<li>75%<span>Royalties</span></li>
 						<li>Unlimited<span> Releases</span></li>
-						<li><span>Mixing & Mastering Rs.89 per track</span>(optional)</li>
-						<li><span>Album(more than 12 songs ) Rs.845</span>(optional)</li>
+						<li><span>Distribution to all stores</span></li>
 						<li>No Commitments cancel anytime!</li>
 					</ul>
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
-						<p>Rs.98<sup>/ month</sup></p>
+						<p>Rs.149<sup>/ month</sup></p>
 				
 					</div>
 				</div>
 		
 				<div class="pricing-table">
-					<h3 class="pricing-title">Ultimate</h3>
+					<h3 class="pricing-title">Ultimate plan</h3>
 					
 					<!-- Lista de Caracteristicas / Propiedades -->
 					<ul class="table-list">
 						<li>UNLIMITED<span>Artists / Band</span></li>
-						<li>75%<span>Royalties</span></li>
+						<li>80%<span>Royalties</span></li>
 						<li>Unlimited<span> Releases</span></li>
-						<li>FREE <span>Mixing & Mastering for 5 track(Rs.49 for additional tracks)</span></li>
-						<li><span>Album(more than 12 songs ) Rs.493</span>(optional)</li>
+						<li><span>Distribution to all stores</span></li>
 						<li>No Commitments cancel anytime!</li>
 					</ul>
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
-						<p>Rs 1476<sup>/ year</sup></p>
+						<p>Rs 1449<sup>/ year</sup></p>
 				
 					</div>
 				</div>

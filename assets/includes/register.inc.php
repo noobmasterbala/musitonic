@@ -16,7 +16,7 @@ if ( isset($_POST['register-submit'])){
         exit();
     }
     else if(!filter_var($mail, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/",$username)){
-        header("Location: ../php/register.php?error=invalidmailusername");
+        header("Location: ./php/register.php?error=invalidmailusername");
         exit();
     }
     else if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
@@ -64,7 +64,7 @@ if ( isset($_POST['register-submit'])){
                         $hashpwd=password_hash($pwd, PASSWORD_DEFAULT);
                         mysqli_stmt_bind_param($stmt, "ssis", $username,$mail,$phone,$hashpwd);
                         mysqli_stmt_execute($stmt);
-                        header("Location: ../php/register.php?signup=success");
+                        header("Location: ../../index.php?signup=success");
                         exit();
                     
                     }
