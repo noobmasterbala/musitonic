@@ -1,8 +1,8 @@
 <?php
 $host= "localhost";
-$dbuser= "root";
-$dbpass= "";
-$dbname="musitonic";
+$dbuser= "musitoni_roshan";
+$dbpass= "RoshanBala123";
+$dbname="musitoni";
 
 $conn=mysqli_connect($host,$dbuser,$dbpass,$dbname);
 if(!$conn){
