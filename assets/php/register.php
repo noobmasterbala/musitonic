@@ -99,10 +99,10 @@ if(isset($_GET['error'])){
   }
  
 }
-else if($_GET['signup']=="success"){
-  echo '<p class="signup"> Signup success!</p>';
+// else if($_GET['signup']=="success"){
+//   echo '<p class="signup"> Signup success!</p>';
 
-}
+// }
 
 
 ?>
