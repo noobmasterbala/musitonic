@@ -2,7 +2,7 @@
 $host= "localhost";
 $dbuser= "musitoni_roshan";
 $dbpass= "RoshanBala123";
-$dbname="musitoni";
+$dbname="musitonic_users";
 
 $conn=mysqli_connect($host,$dbuser,$dbpass,$dbname);
 if(!$conn){
