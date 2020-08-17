@@ -59,7 +59,14 @@ session_start();
                 ?>
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="Contact.php">Contact</a></li>
+					<?php
+					if(isset($_SESSION['userid'])){
+                    echo '<li><a href="Package.php">Packages</a></li>';
+					}
+					?>
+                
+			
+                }
 					<li><a href="index.php#About">About</a></li>
 					<li><a href="index.php#About">Services</a></li>
 					<li><a href="Terms.php">Terms</a></li>
@@ -67,7 +74,74 @@ session_start();
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
                 </ul>
 			</nav>
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						
+						<h2>Our Packages</h2>
+					</header>
+				</div>
+			</section>
+			<div class="pricing-wrapper clearfix">
+				<!-- Titulo -->
+				<h1 class="pricing-table-title">Our Packages</h1>
+		
+				<div class="pricing-table">
+					<h3 class="pricing-title">Free Plan</h3>
+					
+					<!-- Lista de Caracteristicas / Propiedades -->
+					<ul class="table-list">
+						<li>1 <span>Artist /band</span></li>
+						<li>60%<span>Royalties first year </span></li>
+						<li>65% <span>Royalties second year onwards</span></li>
+						<li>Unlimited <span>Releases </span></li>
+						
+						<li><span>Distribution to all stores</span></li>
+						<li>No Commitments cancel anytime!</li>
+					</ul>
+					<!-- Contratar / Comprar -->
+					<div class="table-buy">
+						<p>FREE</p>
 				
+					</div>
+				</div>
+				
+				<div class="pricing-table recommended">
+					<h3 class="pricing-title">Monthly Plan</h3>
+					
+					<!-- Lista de Caracteristicas / Propiedades -->
+					<ul class="table-list">
+						<li>2 <span>Artists / Band</span></li>
+						<li>75%<span>Royalties</span></li>
+						<li>Unlimited<span> Releases</span></li>
+						<li><span>Distribution to all stores</span></li>
+						<li>No Commitments cancel anytime!</li>
+					</ul>
+					<!-- Contratar / Comprar -->
+					<div class="table-buy">
+						<p>Rs.149<sup>/ month</sup></p>
+				
+					</div>
+				</div>
+		
+				<div class="pricing-table">
+					<h3 class="pricing-title">Ultimate plan</h3>
+					
+					<!-- Lista de Caracteristicas / Propiedades -->
+					<ul class="table-list">
+						<li>UNLIMITED<span>Artists / Band</span></li>
+						<li>80%<span>Royalties</span></li>
+						<li>Unlimited<span> Releases</span></li>
+						<li><span>Distribution to all stores</span></li>
+						<li>No Commitments cancel anytime!</li>
+					</ul>
+					<!-- Contratar / Comprar -->
+					<div class="table-buy">
+						<p>Rs 1449<sup>/ year</sup></p>
+				
+					</div>
+				</div>
+			</div>
                 
 
 		<!-- One -->
@@ -77,10 +151,7 @@ session_start();
 						
 						<h2>Contact Us</h2>
 					</header>
-				</div>
-			</section>
-
-		 <div class="con">
+					<div class="con">
 			<p>
 				<strong>Phone: </strong> <br>+919176722461
 			</p>
@@ -92,7 +163,11 @@ session_start();
 			</p>
 
 		</div> 
-		<div class="powr-contact-form" id="2c83107b_1596434753"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
+		
+				</div>
+			</section>
+
+		 
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="container">
@@ -121,3 +196,4 @@ session_start();
 
 	</body>
 </html>
+

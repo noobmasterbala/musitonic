@@ -84,7 +84,14 @@ session_start();
                 ?>
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="Contact.php">Contact</a></li>
+					<?php
+					if(isset($_SESSION['userid'])){
+                    echo '<li><a href="Package.php">Packages</a></li>';
+					}
+					?>
+                
+			
+                }
 					<li><a href="index.php#About">About</a></li>
 					<li><a href="index.php#About">Services</a></li>
 					<li><a href="Terms.php">Terms</a></li>
