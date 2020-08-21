@@ -124,18 +124,11 @@ session_start();
 									<img src="images/pic03.jpg" alt="" />
 								</div>
 								<div class="content">
-									<header class="align-center">
-									<h2>OUR SERVICES:</h2>
-									</header>
-									<ul>
-										<li>We'll get your music into Wynk, Gaana, Spotify , Apple music ,Amazon, Instagram music, Soundcloud plus a lot of other Indian stores, Callertunes and International streaming platforms.
-.</li>
-											<li>Upload unlimited tracks for free, our competitors charge atleast 600 rs per single </li>
-											<li>keep 70 percent of your earning for a free plan subscription and get paid monthly,now that's a wow factor!</li>
-											<li>Easy upload process with very informative track formating, flexible Metadata inputs.</li>
-											<li>Mixing and Mastering services are also available with additional charges which are totally optional and many more...</li>
-									</ul>
-										
+								<header class="align-center">
+								   <h2>About Us:</h2>
+								</header>	
+									<p>Musitonic Studios, A digital music distribution initiative based in Tamil Nadu,India.
+An absolute solution for independent artists, songwriters and Musicians.</p>	
 									
 								</div>
 							</div>
@@ -197,17 +190,16 @@ session_start();
 								</div>
 								<div class="content">
 									<header class="align-center">
-							
-									<h2>Stores we distribute:</h2>
+									<h2>OUR SERVICES:</h2>
 									</header>
-										<p>
-
-											<strong>• Domestic  Platforms: </strong>
-											JioSaavn, Gaana, Hungama, Wynk, Prime  Music. <br>
-
-											<strong>• International  Platforms: </strong>
-											Amazon Music, Spotify, Google play Music, iHeartRadio, Apple Music, YouTube  Music, Pandora, Napster, Shazam, SoundCloud, Facebook  Audio  Library (Instagram music), Facebook Fingerprint, VEVO, TikTok, Resso, TIDAL, Xiami, Yandex  Music,    TIM  Music, AWA, NetEase  Cloud  Music, Neurotic  Media, Tencent, United  Media  Agency, Ultimate  China, Dubset  Media, Gracenote, Nuuday  A/S, 7Digital, Akazoo, Anghami,  Bugs, Deezer, iMusica, KkBox, Kuack  Media, LINE Music, Qobuz, Simfy  Africa, Sirius  XM.                                                                
-										</p>
+									<ul>
+										<li>We'll get your music into Wynk, Gaana, Spotify , Apple music ,Amazon, Instagram music, Soundcloud plus a lot of other Indian stores, Callertunes and International streaming platforms.
+.</li>
+											<li>Upload unlimited tracks for free, our competitors charge atleast 600 rs per single </li>
+											<li>keep 70 percent of your earning for a free plan subscription and get paid monthly,now that's a wow factor!</li>
+											<li>Easy upload process with very informative track formating, flexible Metadata inputs.</li>
+											<li>Mixing and Mastering services are also available with additional charges which are totally optional and many more...</li>
+									</ul>
 							
 							
 								</div>
