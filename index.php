@@ -35,28 +35,206 @@ session_start();
                 ?>
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
-					<?php
-					if(isset($_SESSION['userid'])){
-                    echo '<li><a href="Package.php">Packages</a></li>';
-					}
-					?>
-                
-			
-                }
 					<li><a href="index.php#About">About</a></li>
 					<li><a href="index.php#About">Services</a></li>
 					<li><a href="Terms.php">Terms</a></li>
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
-                </ul>
-                <?php
-                if(isset($_SESSION['userid'])){
-                    echo '<form action="assets/includes/logout.inc.php" method="post">
-					<button type="submit" name="logout-submit">Logout</button>
-                </form>';
+					<?php
+					if(isset($_SESSION['userid'])){
+                    echo '<li><a href="Package.php">Packages</a></li>';
+					}
+					if(isset($_SESSION['userid'])){
+						echo '<form action="assets/includes/logout.inc.php" method="post">
+						<button type="submit" name="logout-submit">Logout</button>
+					</form>';
+				
+					}
+					?>
+                
 			
                 }
-                else{
+					
+                </ul>
+                
+				
+                
+			
+				
+
+
+			</nav>
+		<!-- Banner -->
+			<section class="banner full">
+				<article>
+					<img src="images/slide01.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>Easiest way to get your music into spotify, Itunes, Amazon music and many more!</p>
+							<h2>MUSITONIC STUDIOS</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide02.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>Easiest way to get your music into spotify, Itunes, Amazon music and many more!</p>
+							<h2>MUSITONIC STUDIOS</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide03.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Easiest way to get your music into spotify, Itunes, Amazon music and many more!</p>
+							<h2>MUSITONIC STUDIOS</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide04.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Easiest way to get your music into spotify, Itunes, Amazon music and many more!</p>
+							<h2>MUSITONIC STUDIOS</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide05.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Easiest way to get your music into spotify, Itunes, Amazon music and many more!</p>
+							<h2>MUSITONIC STUDIOS</h2>
+						</header>
+					</div>
+				</article>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2" id="about">
+				<div class="inner" id="About">
+					<div class="grid-style">
+
+						<div>
+							<div class="box" id="services">
+								<div class="image fit">
+									<img src="images/pic03.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+									<h2>OUR SERVICES:</h2>
+									</header>
+									<ul>
+										<li>We'll get your music into Wynk, Gaana, Spotify , Apple music ,Amazon, Instagram music, Soundcloud plus a lot of other Indian stores, Callertunes and International streaming platforms.
+.</li>
+											<li>Upload unlimited tracks for free, our competitors charge atleast 600 rs per single </li>
+											<li>keep 70 percent of your earning for a free plan subscription and get paid monthly,now that's a wow factor!</li>
+											<li>Easy upload process with very informative track formating, flexible Metadata inputs.</li>
+											<li>Mixing and Mastering services are also available with additional charges which are totally optional and many more...</li>
+									</ul>
+										
+									
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic02.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+							
+									<h2>Stores we distribute:</h2>
+									</header>
+										<p>
+
+											<strong>• Domestic  Platforms: </strong>
+											JioSaavn, Gaana, Hungama, Wynk, Prime  Music. <br>
+
+											<strong>• International  Platforms: </strong>
+											Amazon Music, Spotify, Google play Music, iHeartRadio, Apple Music, YouTube  Music, Pandora, Napster, Shazam, SoundCloud, Facebook  Audio  Library (Instagram music), Facebook Fingerprint, VEVO, TikTok, Resso, TIDAL, Xiami, Yandex  Music,    TIM  Music, AWA, NetEase  Cloud  Music, Neurotic  Media, Tencent, United  Media  Agency, Ultimate  China, Dubset  Media, Gracenote, Nuuday  A/S, 7Digital, Akazoo, Anghami,  Bugs, Deezer, iMusica, KkBox, Kuack  Media, LINE Music, Qobuz, Simfy  Africa, Sirius  XM.                                                                
+										</p>
+							
+							
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- TWO -->
+			<section id="one" class="wrapper style2" id="about">
+				<div class="inner" id="About">
+					<div class="grid-style">
+
+						<div>
+							<div class="box" id="services">
+								<div class="image fit">
+									<img src="images/pic03.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+									<h2>Why us?</h2>
+									</header>
+									
+ 									<p>Well many of them doesn't distribute to plattorms like wynk, gaana,CRBT service and other regional ones. which is very crucial for organic growth of fanbase in a country like india!
+									</p>	
+									
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic02.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+							
+									<h2>Stores we distribute:</h2>
+									</header>
+										<p>
+
+											<strong>• Domestic  Platforms: </strong>
+											JioSaavn, Gaana, Hungama, Wynk, Prime  Music. <br>
+
+											<strong>• International  Platforms: </strong>
+											Amazon Music, Spotify, Google play Music, iHeartRadio, Apple Music, YouTube  Music, Pandora, Napster, Shazam, SoundCloud, Facebook  Audio  Library (Instagram music), Facebook Fingerprint, VEVO, TikTok, Resso, TIDAL, Xiami, Yandex  Music,    TIM  Music, AWA, NetEase  Cloud  Music, Neurotic  Media, Tencent, United  Media  Agency, Ultimate  China, Dubset  Media, Gracenote, Nuuday  A/S, 7Digital, Akazoo, Anghami,  Bugs, Deezer, iMusica, KkBox, Kuack  Media, LINE Music, Qobuz, Simfy  Africa, Sirius  XM.                                                                
+										</p>
+							
+							
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			
+		<!-- Two -->
+			<!-- <section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Contact</h2>
+						<p></p><strong>Phone: </strong>+919176722461<br>
+							<strong>Email: </strong>query@musitonicstudios.in<br>
+						<strong>Address: </strong>First Street , B-sector , Anna Nagar West extension, Chennai , Taminnadu, India, 600101<br>
+						
+					</header>
+				</div>
+			</section> -->
+			<section>
+			<div class="container">
+			<?php
+                if(!isset($_SESSION['userid'])){
+                   
 					if(isset($_GET['error'])){
 						if($_GET['error']=="emptyfields"){
 						  echo '<p class="error"> Fill in all fields!</p>';
@@ -80,129 +258,13 @@ session_start();
                 echo ' <form id="login_form" action="assets/includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
 					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
-					<button type="submit" name="login-submit">Login</button>
-                    <br><a href="assets/php/register.php">Register</a>
+					<button type="submit" name="login-submit" class="button">Login</button>
+                    <br><a href="assets/php/register.php" class="button">Register</a>
                     </form>';
                 }
                 ?>
-				
-                
-			
-				
-
-
-			</nav>
-		<!-- Banner -->
-			<section class="banner full">
-				<article>
-					<img src="images/slide01.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Easiest way to get your music into spotify, Itunes, Amazon music and may more</p>
-							<h2>MUSITONIC STUDIOS</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide02.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Easiest way to get your music into spotify, Itunes, Amazon music and may more</p>
-							<h2>MUSITONIC STUDIOS</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide03.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Easiest way to get your music into spotify, Itunes, Amazon music and may more</p>
-							<h2>MUSITONIC STUDIOS</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide04.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Easiest way to get your music into spotify, Itunes, Amazon music and may more</p>
-							<h2>MUSITONIC STUDIOS</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide05.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Easiest way to get your music into spotify, Itunes, Amazon music and may more</p>
-							<h2>MUSITONIC STUDIOS</h2>
-						</header>
-					</div>
-				</article>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style2" id="about">
-				<div class="inner" id="About">
-					<div class="grid-style">
-
-						<div>
-							<div class="box" id="services">
-								<div class="image fit">
-									<img src="images/pic03.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-								
-										<h2>ABOUT US:</h2>
-									</header>
-										<p>Musitonic Studios, A digital music distribution initiative based in Tamil Nadu,India.
-											An absolute solution for independent artists, songwriters and Musicians.                                                                 
-										</p>
-							
-									
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/pic02.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<h2>OUR SERVICES:</h2>
-									</header>
-									<ul>
-										<li>We'll get your music into Spotify, Apple Music, TikTok, Pandora, Amazon, Instagram, YouTube, Tidal, iHeartRadio, Deezer, plus a ton of other stores & streaming services.
-
-											Keep 100% of your earnings, get paid monthly.</li>
-											<li>In stores 10-20x faster than any other distributor, at a fraction of the price.</li>
-											<li>Pay only $19.99 to upload unlimited albums & songs for a year (our competitors charge at least 2x that just to upload one album).</li>
-											<li>Keep all your earnings—or set up "splits" to automatically route any percentage of earnings, from any track, to anyone.</li>
-									</ul>
-							
-								</div>
-							</div>
-						</div>
-
-					</div>
 				</div>
-			</section>
-			
-		<!-- Two -->
-			<!-- <section id="two" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Contact</h2>
-						<p></p><strong>Phone: </strong>+919176722461<br>
-							<strong>Email: </strong>query@musitonicstudios.in<br>
-						<strong>Address: </strong>First Street , B-sector , Anna Nagar West extension, Chennai , Taminnadu, India, 600101<br>
-						
-					</header>
-				</div>
-			</section> -->
+				</section>
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
