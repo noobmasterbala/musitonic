@@ -265,6 +265,30 @@ session_start();
                 ?>
 				</div>
 				</section>
+				<section class="wrapper style1">
+				<div class="container">
+				<h2 class="align-center">FAQ's</h2>
+				<ul><li>Question 1:
+						will my tracks be removed from the stores when i cancel your subscription?
+						<br>
+						Answer: Nope not at all, it remains there for eternity unless you want to remove it!</li>
+						<br><br>
+						<li>Question 2:
+						can i cancel my subscription anytime if i want ?
+						<br>
+						Answer: Yes as it states no commitments!</li>
+						<br><br>
+						<li>Question 3:
+						How much time will it take for my songs go be live in the stores?
+						<br>
+						Answer: You should upload the song atleast before 2 weeks to make it live on all stores at same time, and another exciting thing is you can schedule your releases!</li>
+						<br><br>
+						<li>Question 4:
+						how long does it take for my track to mastered?
+						<br>
+						Answer: For mastering alone it take 2 days max.</li></p>
+				</div>
+				</section>
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
