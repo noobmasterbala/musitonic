@@ -223,7 +223,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 				</div>
 			</section> -->
 			<section>
-			<div class="container">
+			<div class="container align-center" >
 			<?php
                 if(!isset($_SESSION['userid'])){
                    
