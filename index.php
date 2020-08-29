@@ -224,7 +224,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 				</div>
 			</section> -->
 			<section>
-			<div class="container align-center" >
+			<div class="container align-center" style="padding: 100px 100px;">
 			<?php
                 if(!isset($_SESSION['userid'])){
                    
@@ -258,8 +258,8 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
                 ?>
 				</div>
 				</section>
-				<section class="wrapper style1">
-				<div class="container">
+				<section >
+				<div class="container faq">
 				<h2 class="align-center">FAQ's</h2>
 				<ul><li>Question 1:
 						will my tracks be removed from the stores when i cancel your subscription?

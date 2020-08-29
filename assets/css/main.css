@@ -470,6 +470,9 @@
 	.\-1u {
 		margin-left: 8.33333%;
 	}
+	.faq{
+		background-color: grey;
+	}
 
 	@media screen and (max-width: 1680px) {
 

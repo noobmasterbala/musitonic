@@ -112,6 +112,9 @@ if(isset($_GET['error'])){
 <input  type="text" name="phone"   placeholder="Phone Number">
 <input  type="password" name="pwd"   placeholder="Password" >
 <input  type="password" name="pwd-repeat"   placeholder="Repeat Password">
+<input type="checkbox" id="agree" name="agree" sytle=" position: absolute; left: 0px;" required><label for="agree" style="font-size: 12px;">Agree to <a href="../../terms.php">Terms</a>, <a href="../../Privacy.php">Privacy Policy</a> and <a href="../../Distribution.php">Distribution agreement</a></label>
+
+<br>
 <input type="submit" name="register-submit" id="submit">
 </form>
 </div>
