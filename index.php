@@ -40,6 +40,7 @@ session_start();
 					<li><a href="Terms.php">Terms</a></li>
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
+					<li><a href="Distribution.php">Distribution Agreement</a></li>
 					<?php
 					if(isset($_SESSION['userid'])){
                     echo '<li><a href="Package.php">Packages</a></li>';

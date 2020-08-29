@@ -72,6 +72,7 @@ session_start();
 					<li><a href="Terms.php">Terms</a></li>
 					<li><a href="Privacy.php">Privacy</a></li>
 					<li><a href="Disclaimer.php">Disclaimer</a></li>
+					<li><a href="Distribution.php">Distribution Agreement</a></li>
                 </ul>
 			</nav>
 			<section id="One" class="wrapper style3">
