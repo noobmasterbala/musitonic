@@ -261,25 +261,26 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 				<section >
 				<div class="container faq">
 				<h2 class="align-center">FAQ's</h2>
-				<ul><li>Question 1:
+				<ul class="align-center"><li><strong>Question 1:</strong>
 						will my tracks be removed from the stores when i cancel your subscription?
 						<br>
-						Answer: Nope not at all, it remains there for eternity unless you want to remove it!</li>
+						<strong>Answer:</strong> Nope not at all, it remains there for eternity unless you want to remove it!</li>
 						<br><br>
-						<li>Question 2:
+						<li><strong>Question 2:</strong>
 						can i cancel my subscription anytime if i want ?
 						<br>
-						Answer: Yes as it states no commitments!</li>
+						<strong>Answer:</strong> Yes as it states no commitments!</li>
 						<br><br>
-						<li>Question 3:
+						<li><strong>Question 3:</strong>
 						How much time will it take for my songs go be live in the stores?
 						<br>
-						Answer: You should upload the song atleast before 2 weeks to make it live on all stores at same time, and another exciting thing is you can schedule your releases!</li>
+						<strong>Answer: </strong>You should upload the song atleast before 2 weeks to make it live on all stores at same time, and another exciting thing is you can schedule your releases!</li>
 						<br><br>
-						<li>Question 4:
+						<li><strong>Question 4:</strong>
 						how long does it take for my track to mastered?
 						<br>
-						Answer: For mastering alone it take 2 days max.</li></p>
+						<strong>Answer:</strong> For mastering alone it take 2 days max.</li></p>
+				</ul>
 				</div>
 				</section>
 			<section id="One" class="wrapper style3">
