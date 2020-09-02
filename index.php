@@ -139,7 +139,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 						<div>
 							<div class="box">
 								<div class="image fit">
-									<img src="images/pic02.jpg" alt="" />
+									<img src="images/pic02.png" alt="" />
 								</div>
 								<div class="content">
 									<header class="align-center">
@@ -171,14 +171,14 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 						<div>
 							<div class="box" id="services">
 								<div class="image fit">
-									<img src="images/pic03.jpg" alt="" />
+									<img src="images/pic03.png" alt="" />
 								</div>
 								<div class="content">
 									<header class="align-center">
 									<h2>Why us?</h2>
 									</header>
 									
- 									<p>Well many of them doesn't distribute to plattorms like wynk, gaana,CRBT service and other regional ones. which is very crucial for organic growth of fanbase in a country like india!
+ 									<p>Many other distributers don't distribute to plattorms like wynk, gaana, CRBT service and other regional streaming platforms, which is very crucial for organic growth of fanbase in a country like india!
 									</p>	
 									
 								</div>
@@ -195,12 +195,11 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 									<h2>OUR SERVICES:</h2>
 									</header>
 									<ul>
-										<li>We'll get your music into Wynk, Gaana, Spotify , Apple music ,Amazon, Instagram music, Soundcloud plus a lot of other Indian stores, Callertunes and International streaming platforms.
-.</li>
-											<li>Upload unlimited tracks for free, our competitors charge atleast 600 rs per single </li>
-											<li>keep 70 percent of your earning for a free plan subscription and get paid monthly,now that's a wow factor!</li>
+											<li>We'll get your music into Wynk, Gaana, Spotify , Apple music ,Amazon, Instagram music, Soundcloud and many other Indian and International streaming platforms, we can also add it to Callertunes!</li>
+											<li>Upload unlimited tracks for free, our competitors charge atleast Rs. 600 per single! </li>
+											<li>keep 70 percent of your earning with the free plan subscription and get paid monthly, I think this can be called a wow factor!</li>
 											<li>Easy upload process with very informative track formating, flexible Metadata inputs.</li>
-											<li>Mixing and Mastering services are also available with additional charges which are totally optional and many more...</li>
+											<li>Mixing and Mastering services are optional and available with additional charges.</li>
 									</ul>
 							
 							

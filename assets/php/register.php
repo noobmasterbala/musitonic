@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><title>Login form</title></head>
+<head>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+  <title>Login form</title>
+</head>
 <body>
 <style>
 body{
