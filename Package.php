@@ -6,6 +6,7 @@ session_start();
 <!DOCTYPE HTML>
 <html>
 	<head>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 		<title>Musitonic Sudios</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
