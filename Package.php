@@ -104,8 +104,9 @@ session_start();
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
 						<p>FREE</p>
-				
+					
 					</div>
+					<button onclick="window.location.href='https://docs.google.com/forms/d/1llzd_MMTvzKCc1SqoRo4n3-ySOsY-Ag8mPAHt9VobrI/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 				</div>
 				
 				<div class="pricing-table recommended">
@@ -122,7 +123,7 @@ session_start();
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
 						<p>Rs.149<sup>/ month</sup></p>
-				
+						<button onclick="window.location.href='https://docs.google.com/forms/d/1XSOMSnv63glOjvIiInrLOuCxDjbrzqmOQfx16A8jMr0/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 					</div>
 				</div>
 		
@@ -140,6 +141,7 @@ session_start();
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
 						<p>Rs 1449<sup>/ year</sup></p>
+						<button onclick="window.location.href='https://docs.google.com/forms/d/1Y-irdIAmowUb_b70yN3tzYXRpiiQWkcxL-yQ9ALT1WY/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 				
 					</div>
 				</div>
