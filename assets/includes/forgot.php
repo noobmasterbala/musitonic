@@ -123,7 +123,7 @@
             $mail->SMTPDebug = false;
             $mail->Username = 'noreply@musitonicstudios.in';
             $mail->Password = 'Roshan@2020';
-            $mail->setFrom('noreply@musitonicstudios.in', '(Password Reset)');
+            $mail->setFrom('noreply@musitonicstudios.in', 'Password Reset');
             $mail->addReplyTo('noreply@musitonicstudios.in', 'Team');
             $mail->addAddress($Mail);
             $mail->Subject  =  'Reset Password';
