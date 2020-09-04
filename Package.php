@@ -84,7 +84,7 @@ session_start();
 					</header>
 				</div>
 			</section>
-			<div class="pricing-wrapper clearfix">
+			<div class="pricing-wrapper clearfix" style="height: 120vh;">
 				<!-- Titulo -->
 				<h1 class="pricing-table-title">Our Packages</h1>
 		
@@ -92,7 +92,7 @@ session_start();
 					<h3 class="pricing-title">Free Plan</h3>
 					
 					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list">
+					<ul class="table-list" style="margin: auto 15px;list-style:none;">
 						<li>1 <span>Artist /band</span></li>
 						<li>60%<span>Royalties first year </span></li>
 						<li>65% <span>Royalties second year onwards</span></li>
@@ -103,17 +103,17 @@ session_start();
 					</ul>
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
-						<p>FREE</p>
-					
+						<p style="text-align: center;float:none;">FREE</p>
+                        <button style="margin-left: 80px;" onclick="window.location.href='https://docs.google.com/forms/d/1llzd_MMTvzKCc1SqoRo4n3-ySOsY-Ag8mPAHt9VobrI/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 					</div>
-					<button onclick="window.location.href='https://docs.google.com/forms/d/1llzd_MMTvzKCc1SqoRo4n3-ySOsY-Ag8mPAHt9VobrI/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
+					
 				</div>
 				
 				<div class="pricing-table recommended">
 					<h3 class="pricing-title">Monthly Plan</h3>
 					
 					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list">
+					<ul class="table-list" style="margin: auto 15px;list-style:none;">
 						<li>2 <span>Artists / Band</span></li>
 						<li>75%<span>Royalties</span></li>
 						<li>Unlimited<span> Releases</span></li>
@@ -121,9 +121,9 @@ session_start();
 						<li>No Commitments cancel anytime!</li>
 					</ul>
 					<!-- Contratar / Comprar -->
-					<div class="table-buy">
-						<p>Rs.149<sup>/ month</sup></p>
-						<button onclick="window.location.href='https://docs.google.com/forms/d/1XSOMSnv63glOjvIiInrLOuCxDjbrzqmOQfx16A8jMr0/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
+					<div class="table-buy" >
+						<p style="text-align: center;float:none;">Rs.149<sup>/ month</sup></p>
+						<button style="margin-left: 80px;" onclick="window.location.href='https://docs.google.com/forms/d/1XSOMSnv63glOjvIiInrLOuCxDjbrzqmOQfx16A8jMr0/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 					</div>
 				</div>
 		
@@ -131,7 +131,7 @@ session_start();
 					<h3 class="pricing-title">Ultimate plan</h3>
 					
 					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list">
+					<ul class="table-list" style="margin: auto 15px;list-style:none;">
 						<li>UNLIMITED<span>Artists / Band</span></li>
 						<li>80%<span>Royalties</span></li>
 						<li>Unlimited<span> Releases</span></li>
@@ -140,8 +140,8 @@ session_start();
 					</ul>
 					<!-- Contratar / Comprar -->
 					<div class="table-buy">
-						<p>Rs 1449<sup>/ year</sup></p>
-						<button onclick="window.location.href='https://docs.google.com/forms/d/1Y-irdIAmowUb_b70yN3tzYXRpiiQWkcxL-yQ9ALT1WY/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
+						<p style="text-align: center;float:none;">Rs 1449<sup>/ year</sup></p>
+						<button style="margin-left: 80px;" onclick="window.location.href='https://docs.google.com/forms/d/1Y-irdIAmowUb_b70yN3tzYXRpiiQWkcxL-yQ9ALT1WY/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
 				
 					</div>
 				</div>

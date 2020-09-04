@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 		<title>Musitonic Studios</title>
 		<meta charset="utf-8" />
@@ -121,7 +122,7 @@ session_start();
 					<div class="grid-style">
 
 						<div>
-							<div class="box" id="services">
+							<div class="box" id="services" style="height: 100vh;">
 								<div class="image fit">
 									<img src="images/pic03.jpg" alt="" />
 								</div>
@@ -137,7 +138,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 						</div>
 
 						<div>
-							<div class="box">
+							<div class="box" style="height: 100vh;">
 								<div class="image fit">
 									<img src="images/pic02.png" alt="" />
 								</div>
@@ -169,7 +170,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 					<div class="grid-style">
 
 						<div>
-							<div class="box" id="services">
+							<div class="box" id="services" style="height: 110vh;">
 								<div class="image fit">
 									<img src="images/pic03.png" alt="" />
 								</div>
@@ -186,7 +187,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 						</div>
 
 						<div>
-							<div class="box">
+							<div class="box" style="height: 110vh;">
 								<div class="image fit">
 									<img src="images/pic02.jpg" alt="" />
 								</div>
@@ -225,6 +226,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 			</section> -->
 			<section>
 			<div class="container align-center" style="padding: 100px 100px;">
+            <h1 style="color:black !important;text-align:left !important;font-size:30px;">Login / Register:</h1>
 			<?php
                 if(!isset($_SESSION['userid'])){
                    
@@ -251,38 +253,88 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
                 echo ' <form id="login_form" action="assets/includes/login.inc.php" method="post">
 					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
 					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
-					<button type="submit" name="login-submit" class="button">Login</button>
-                    <br><a href="assets/php/register.php" class="button">Register</a>
+                    <button type="submit" name="login-submit" class="button">Login</button>
+                    <a href="assets/php/register.php" class="button">Register</a>
+                    <br><a style="margin-top:5px;" href="assets/includes/forgot.php" class="button">Forgot Password</a>
                     </form>';
                 }
                 ?>
 				</div>
 				</section>
-				<section >
-				<div class="container faq">
-				<h2 class="align-center">FAQ's</h2>
-				<ul class="align-center"><li><strong>Question 1:</strong>
-						will my tracks be removed from the stores when i cancel your subscription?
-						<br>
-						<strong>Answer:</strong> Nope not at all, it remains there for eternity unless you want to remove it!</li>
-						<br><br>
-						<li><strong>Question 2:</strong>
-						can i cancel my subscription anytime if i want ?
-						<br>
-						<strong>Answer:</strong> Yes as it states no commitments!</li>
-						<br><br>
-						<li><strong>Question 3:</strong>
-						How much time will it take for my songs go be live in the stores?
-						<br>
-						<strong>Answer: </strong>You should upload the song atleast before 2 weeks to make it live on all stores at same time, and another exciting thing is you can schedule your releases!</li>
-						<br><br>
-						<li><strong>Question 4:</strong>
-						how long does it take for my track to mastered?
-						<br>
-						<strong>Answer:</strong> For mastering alone it take 2 days max.</li></p>
-				</ul>
-				</div>
-				</section>
+                <style>
+                    .accordion-section .panel-default > .panel-heading {
+                        border: 0;
+                        background: #f4f4f4;
+                        padding: 0;
+                    }
+                </style>
+                <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+                    <div class="container">
+                        <h2>Frequently Asked Questions </h2>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                            <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                    Will my tracks be removed from the stores when i cancel your subscription?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                                <div class="panel-body px-3 mb-4">
+                                <p>Nope not at all, it remains there for eternity unless you want to remove it!</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                            <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    Can i cancel my subscription anytime if i want ?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body px-3 mb-4">
+                                <p>Yes as it states no commitments!</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                            <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    How much time will it take for my songs go be live in the stores?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body px-3 mb-4">
+                                <p>You should upload the song atleast before 2 weeks to make it live on all stores at same time, and another exciting thing is you can schedule your releases!</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="panel panel-default">
+                            <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                    How long does it take for my track to mastered?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                <div class="panel-body px-3 mb-4">
+                                <p>For mastering alone it take 2 days max.</p>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                
+                </div>
+            </section>
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
@@ -325,6 +377,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
