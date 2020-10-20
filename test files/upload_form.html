@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- include jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- include bootstrap files -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $('#btn').click(function () {
+                    $('.myprogress').css('width', '0');
+                    $('.msg').text('');
+                    var myfile = $('#fileToUpload').val();
+                    if (myfile == '') {
+                        alert('Please select a file');
+                        return;
+                    }
+                    var formData = new FormData();
+                    formData.append('fileToUpload', $('#fileToUpload')[0].files[0]);
+                    $('#btn').attr('disabled', 'disabled');
+                     $('.msg').text('Uploading in progress...');
+                    $.ajax({
+                        url: 'upload.php',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        // this part is progress bar
+                        xhr: function () {
+                            var xhr = new window.XMLHttpRequest();
+                            xhr.upload.addEventListener("progress", function (evt) {
+                                if (evt.lengthComputable) {
+                                    var percentComplete = evt.loaded / evt.total;
+                                    percentComplete = parseInt(percentComplete * 100);
+                                    $('.myprogress').text(percentComplete + '%');
+                                    $('.myprogress').css('width', percentComplete + '%');
+                                }
+                            }, false);
+                            return xhr;
+                        },
+                        success: function (data) {
+                            $('.msg').text(data);
+                            $('#btn').removeAttr('disabled');
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <form id="form" method="post" enctype="multipart/form-data">
+                    <br><br>
+                    Select Song Track to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+                    <div class="form-group">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success myprogress" role="progressbar" style="width:0%">0%</div>
+                        </div>
+                        <div class="msg"></div>
+                    </div>
+                    <input type="button" id="btn" class="btn-success" value="Upload" />
+                  </form>
+            </div>
+        </div>
+    </body>
+</html>
