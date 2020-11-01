@@ -115,7 +115,7 @@ if(!isset($_SESSION['username'])){
                 <form id="form" action="./newSongDB.php">
                     <div class="form-group row">
                         <label class="col-12" for="songs">No. of Songs</label>
-                        <select class="col-10" id="nsong" name="#songs" data-placeholder="Choose a Language..." onchange="songs(this.value);document.getElementById('n').value = this.value;" style="margin-left:30px;">
+                        <select class="col-12" id="nsong" name="#songs" data-placeholder="Choose a Language..." onchange="songs(this.value);document.getElementById('n').value = this.value;" style="margin-left:30px;">
                             <option disabled selected>Choose # of songs</option>
                             <option value=1>1</option>
                             <option value=2>2</option>
