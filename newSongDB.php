@@ -42,5 +42,5 @@
     // }
     // $data = array($present,$total);
     // echo json_encode($data);
-
+    echo "<script>window.location.replace('success_upload.php');</script>";
 ?>

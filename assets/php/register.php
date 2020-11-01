@@ -72,6 +72,20 @@ input[type="button"]{
   color: green;
   align: center;
 }
+.textfield {
+  position: relative;
+}
+.textfield .hint {
+    margin-bottom: 20px;
+  color: black;
+  display: none;
+  position: absolute;
+  width: 15em;
+  bottom: 1.3em;
+  background: #ff9;
+  padding: 0 0.2em;
+  border: solid 1px;
+}
 </style>
 <div class="login">
 <h1>Register</h1>
@@ -110,7 +124,16 @@ if(isset($_GET['error'])){
 
 ?>
 <form action="../includes/register.inc.php" method="post">
-<input  type="text" name="uid"   placeholder="Username" >
+<table>
+<tr>
+  <td>
+  <div class=textfield>
+  <div class=hint>This Name will be used for Albums and cannot be changed later</div>
+  <input id=bar type="text" name="uid" placeholder="Artist Name" onfocus="hint(this)" onblur="unhint(this)">
+  </div>
+</table>
+<!-- <div class=hint>This Name will be used for Albums and cannot be changed later</div> -->
+<!-- <input  type="text" name="uid"   placeholder="Artist Name" onfocus="hint(this)" onblur="unhint(this)"> -->
 <input  type="text" name="mail"   placeholder="Email" >
 <input  type="text" name="phone"   placeholder="Phone Number">
 <input  type="password" name="pwd"   placeholder="Password" >
@@ -122,4 +145,12 @@ if(isset($_GET['error'])){
 </form>
 </div>
 </body>
+<script>
+function hint(elem) {
+  elem.parentNode.firstElementChild.style.display = 'block';
+}
+function unhint(elem) {
+  elem.parentNode.firstElementChild.style.display = 'none';
+}
+</script>
 </html>

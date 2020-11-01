@@ -29,7 +29,7 @@ session_start();
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html"><img src="images/logo.png" height="50" width="50"></a></div>
+				<div class="logo"><a href="index.php"><img src="images/logo.png" height="50" width="50"></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -80,71 +80,13 @@ session_start();
 				<div class="inner">
 					<header class="align-center">
 						
-						<h2>Our Packages</h2>
+						<h2>Song Details have been Successfully Uploaded! You will be notified via E-Mail on further updates and Status. <br><br>Thank You!<br>For Any Queries <a href="mailto:query@musitonicstudios.in">Contact Us.</a></h2>
 					</header>
 				</div>
 			</section>
 			<div class="pricing-wrapper clearfix" style="height: 120vh;">
 				<!-- Titulo -->
-				<h1 class="pricing-table-title">Our Packages</h1>
-		
-				<div class="pricing-table" onclick="window.location.href='album-form.php';">
-					<h3 class="pricing-title">Free Plan</h3>
-					
-					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list" style="margin: auto 15px;list-style:none;">
-						<li>1 <span>Artist /band</span></li>
-						<li>60%<span>Royalties first year </span></li>
-						<li>65% <span>Royalties second year onwards</span></li>
-						<li>Unlimited <span>Releases </span></li>
-						
-						<li><span>Distribution to all stores</span></li>
-						<li>No Commitments cancel anytime!</li>
-					</ul>
-					<!-- Contratar / Comprar -->
-					<div class="table-buy">
-						<p style="text-align: center;float:none;">FREE</p>
-                        <button style="margin-left: 80px;" onclick="window.location.href='album-form.php';" ><strong>Buy Now!</strong></button>
-					</div>
-					
-				</div>
 				
-				<div class="pricing-table recommended">
-					<h3 class="pricing-title">Monthly Plan</h3>
-					
-					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list" style="margin: auto 15px;list-style:none;">
-						<li>2 <span>Artists / Band</span></li>
-						<li>75%<span>Royalties</span></li>
-						<li>Unlimited<span> Releases</span></li>
-						<li><span>Distribution to all stores</span></li>
-						<li>No Commitments cancel anytime!</li>
-					</ul>
-					<!-- Contratar / Comprar -->
-					<div class="table-buy" >
-						<p style="text-align: center;float:none;">Rs.149<sup>/ month</sup></p>
-						<button style="margin-left: 80px;" onclick="window.location.href='https://docs.google.com/forms/d/1XSOMSnv63glOjvIiInrLOuCxDjbrzqmOQfx16A8jMr0/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
-					</div>
-				</div>
-		
-				<div class="pricing-table">
-					<h3 class="pricing-title">Ultimate plan</h3>
-					
-					<!-- Lista de Caracteristicas / Propiedades -->
-					<ul class="table-list" style="margin: auto 15px;list-style:none;">
-						<li>UNLIMITED<span>Artists / Band</span></li>
-						<li>80%<span>Royalties</span></li>
-						<li>Unlimited<span> Releases</span></li>
-						<li><span>Distribution to all stores</span></li>
-						<li>No Commitments cancel anytime!</li>
-					</ul>
-					<!-- Contratar / Comprar -->
-					<div class="table-buy">
-						<p style="text-align: center;float:none;">Rs 1449<sup>/ year</sup></p>
-						<button style="margin-left: 80px;" onclick="window.location.href='https://docs.google.com/forms/d/1Y-irdIAmowUb_b70yN3tzYXRpiiQWkcxL-yQ9ALT1WY/edit?usp=sharing';" ><strong>Buy Now!</strong></button>
-				
-					</div>
-				</div>
 			</div>
                 
 

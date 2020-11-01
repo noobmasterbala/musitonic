@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['username'])){
+    echo "<script>alert('Please Login First!');window.location.replace('index.php');</script>";
+}
 ?>
 
 
@@ -34,7 +37,7 @@ session_start();
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html"><img src="images/logo.png" height="50" width="50"></a></div>
+				<div class="logo"><a href="index.php"><img src="images/logo.png" height="50" width="50"></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -123,7 +126,7 @@ session_start();
                             <option value=7>7</option>
                             <option value=8>8</option>
                         </select>
-                        <i class="col-1 fa fa-plus fa-2x" aria-hidden="true" style="margin-top: 8px;"></i>
+                        <!-- <i class="col-1 fa fa-plus fa-2x" aria-hidden="true" style="margin-top: 8px;"></i> -->
                     </div><br>
                     <input type="text" id="n" hidden name="n">
                     <div class="form-group">
@@ -149,28 +152,28 @@ session_start();
                                     
                                     <div class="form-group">
                                         <label for="artist">Artist Name</label>
-                                        <input type="text" class="form-control" id="artistn1" name="artistn1" placeholder="Artist Name" disabled>
+                                        <input type="text" class="form-control" id="artistn1" name="artistn1" placeholder="Artist Name" disabled value="<?php echo $_SESSION['username'];?>">
                                     </div>
                                     <div id="list" class="row justify-content-center">
-                                        <div class="card card-body col-5" style="padding: 20px;margin:20px;display: none;">
+                                        <div class="card card-body col-12 col-sm-5" style="padding: 20px;margin:20px;display: none;">
                                             <div class="form-group">
                                                 <label for="artist">Song Name</label>
-                                                <input type="text" class="form-control" id="trackn1" name="trackn1" placeholder="Track Name">
+                                                <input type="text" class="form-control" id="trackn1" name="trackn1" placeholder="Track Name" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="songfile">Song File</label>
-                                                <input type="file" class="form-control-file" id="songfile1" name="songfile1" required onchange="/* this.value='' */">
+                                                <input type="file" class="form-control-file" id="songfile1" name="songfile1" required>
                                                 <small id="fileHelp" class="form-text text-muted">Note: Only WAV format is accepted of maximum size of 100mb</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="albumart">Album Artwork</label>
-                                                <input type="file" class="form-control-file" id="albumart1" name="albumart1" required onchange="/* this.value='' */">
+                                                <input type="file" class="form-control-file" id="albumart1" name="albumart1" required>
                                                 <small id="albumArtHelp" class="form-text text-muted">Note: Only JPG format with Square Ratio is accepted of maximum size of 50mb (Minimum Resolution: 1500x1500)</small>
                                             </div><br>
                                             <div class="form-group">
                                                 <label for="lang">Language</label>
-                                                <select id="lang1" name="lang1" data-placeholder="Choose a Language...">
-                                                    <option hidden selected>Choose an Option</option>
+                                                <select id="lang1" name="lang1" data-placeholder="Choose a Language..." required>
+                                                    <option hidden selected value="">Choose an Option</option>
                                                     <option value="Afrikaans">Afrikaans</option>
                                                     <option value="Albanian">Albanian</option>
                                                     <option value="Arabic">Arabic</option>
@@ -247,12 +250,12 @@ session_start();
                                             </div>
                                             <div class="form-group">
                                                 <label for="date">Date of Release</label>
-                                                <input type="date" class="form-control" id="date1" name="date1">
+                                                <input type="date" class="form-control" id="date1" name="date1" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="date">Genre</label>
-                                                <select data-placeholder="Choose a Genre..." id="genre1" name="genre1">
-                                                    <option hidden selected>Choose an Option</option>
+                                                <select data-placeholder="Choose a Genre..." id="genre1" name="genre1" required>
+                                                    <option hidden selected value="">Choose an Option</option>
                                                     <option value="Jazz">Jazz</option>
                                                     <option value="Hip Hop">Hip Hop</option>
                                                     <option value="Rock">Rock</option>
@@ -267,8 +270,8 @@ session_start();
                                             </div>
                                             <div class="form-group">
                                                 <label for="date">Sub - Genre</label>
-                                                <select data-placeholder="Choose Sub-Genre..." id="subgenre1" name="subgenre1">
-                                                    <option hidden selected>Choose an Option</option>
+                                                <select data-placeholder="Choose Sub-Genre..." id="subgenre1" name="subgenre1" required>
+                                                    <option hidden selected value="">Choose an Option</option>
                                                     <option value="Jazz">Jazz</option>
                                                     <option value="Hip Hop">Hip Hop</option>
                                                     <option value="Rock">Rock</option>
@@ -284,7 +287,7 @@ session_start();
                                             <label for="details">Other Details</label>
                                             <div id="sel1" class="form-group row justify-centent-center" style="padding-left: 25px;padding-bottom:30px;" >
                                                 <select id="options1" class="col-6" onchange="changeID(this.value);">
-                                                    <option disabled selected>Choose an option</option>
+                                                    <option disabled selected value="">Choose an option</option>
                                                     <option id="lycrist1" value="lycrist1">Lycrist</option>
                                                     <option id="composer1" value="composer1">Composer</option>
                                                     <option id="mixing1" value="mixing1">Mixing</option>
@@ -346,22 +349,24 @@ session_start();
                                     </div>
                                     <br>
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="tc">
+                                        <input type="checkbox" class="form-check-input" id="tc" required>
                                         <label class="form-check-label" for="tc">I agree to Terms and Conditions</label>
                                     </div>
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="agreement">
+                                        <input type="checkbox" class="form-check-input" id="agreement" required>
                                         <label class="form-check-label" for="agreement">I agree to the Agreement between me and Musitonic Studios®</label>
                                     </div>
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="authorize">
+                                        <input type="checkbox" class="form-check-input" id="authorize" required>
                                         <label class="form-check-label" for="authorize">I authorize Permission for Musitonic Studios® to distribute the Song on my behalf</label>
                                     </div>
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="">
+                                    <!-- <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="" required>
                                         <label class="form-check-label" for="authorize">CAPTCHA</label>
-                                    </div><br>
+                                    </div><br> -->
+                                    <br>
                                     <button id="btn" class="btn btn-primary" onclick="upload();">Submit</button><br><br>
+                                    <button type="submit" id="subButton" hidden></button>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-success myprogress" role="progressbar" style="width:0%">0%</div>
                                     </div>
@@ -444,7 +449,7 @@ session_start();
                     $("#nsong").attr('disabled',true);
                     $("#list").html('');
                     for(n=1;n-1<i;n++){
-                        disp = '<div class="card card-body col-5" style="padding: 20px;margin:20px;"> <div class="form-group"> <label for="artist">Song Name</label> <input type="text" class="form-control" id="trackn'+n+'" name="trackn'+n+'" placeholder="Track Name"> </div><div class="form-group"> <label for="songfile">Song File</label> <input type="file" class="form-control-file" id="songfile'+n+'" name="songfile'+n+'" required > <small id="fileHelp" class="form-text text-muted">Note: Only WAV format is accepted of maximum size of 100mb</small> </div><div class="form-group"> <label for="albumart">Album Artwork</label> <input type="file" class="form-control-file" id="albumart'+n+'" name="albumart'+n+'" required > <small id="albumArtHelp" class="form-text text-muted">Note: Only JPG format with Square Ratio is accepted of maximum size of 50mb (Minimum Resolution: 1500x1500)</small> </div><br><div class="form-group"> <label for="lang">Language</label> <select id="lang'+n+'" name="lang'+n+'" data-placeholder="Choose a Language..."> <option hidden selected>Choose an Option</option> <option value="Afrikaans">Afrikaans</option> <option value="Albanian">Albanian</option> <option value="Arabic">Arabic</option> <option value="Armenian">Armenian</option> <option value="Basque">Basque</option> <option value="Bengali">Bengali</option> <option value="Bulgarian">Bulgarian</option> <option value="Catalan">Catalan</option> <option value="Cambodian">Cambodian</option> <option value="Chinese (Mandarin)">Chinese (Mandarin)</option> <option value="Croatian">Croatian</option> <option value="Czech">Czech</option> <option value="Danish">Danish</option> <option value="Dutch">Dutch</option> <option value="English">English</option> <option value="Estonian">Estonian</option> <option value="Fiji">Fiji</option> <option value="Finnish">Finnish</option> <option value="French">French</option> <option value="Georgian">Georgian</option> <option value="German">German</option> <option value="Greek">Greek</option> <option value="Gujarati">Gujarati</option> <option value="Hebrew">Hebrew</option> <option value="Hindi">Hindi</option> <option value="Hungarian">Hungarian</option> <option value="Icelandic">Icelandic</option> <option value="Indonesian">Indonesian</option> <option value="Irish">Irish</option> <option value="Italian">Italian</option> <option value="Japanese">Japanese</option> <option value="Javanese">Javanese</option> <option value="Korean">Korean</option> <option value="Latin">Latin</option> <option value="Latvian">Latvian</option> <option value="Lithuanian">Lithuanian</option> <option value="Macedonian">Macedonian</option> <option value="Malay">Malay</option> <option value="Malayalam">Malayalam</option> <option value="Maltese">Maltese</option> <option value="Maori">Maori</option> <option value="Marathi">Marathi</option> <option value="Mongolian">Mongolian</option> <option value="Nepali">Nepali</option> <option value="Norwegian">Norwegian</option> <option value="Persian">Persian</option> <option value="Polish">Polish</option> <option value="Portuguese">Portuguese</option> <option value="Punjabi">Punjabi</option> <option value="Quechua">Quechua</option> <option value="Romanian">Romanian</option> <option value="Russian">Russian</option> <option value="Samoan">Samoan</option> <option value="Serbian">Serbian</option> <option value="Slovak">Slovak</option> <option value="Slovenian">Slovenian</option> <option value="Spanish">Spanish</option> <option value="Swahili">Swahili</option> <option value="Swedish ">Swedish </option> <option value="Tamil">Tamil</option> <option value="Tatar">Tatar</option> <option value="Telugu">Telugu</option> <option value="Thai">Thai</option> <option value="Tibetan">Tibetan</option> <option value="Tonga">Tonga</option> <option value="Turkish">Turkish</option> <option value="Ukrainian">Ukrainian</option> <option value="Urdu">Urdu</option> <option value="Uzbek">Uzbek</option> <option value="Vietnamese">Vietnamese</option> <option value="Welsh">Welsh</option> <option value="Xhosa">Xhosa</option> </select> </div><div class="form-group"> <label for="date">Date of Release</label> <input type="date" class="form-control" id="date'+n+'" name="date'+n+'"> </div><div class="form-group"> <label for="date">Genre</label> <select data-placeholder="Choose a Genre..." id="genre'+n+'" name="genre'+n+'"> <option hidden selected>Choose an Option</option> <option value="Jazz">Jazz</option> <option value="Hip Hop">Hip Hop</option> <option value="Rock">Rock</option> <option value="Pop">Folk</option> <option value="Blues">Blues</option> <option value="Heavy Metal">Heavy Metal</option> <option value="EDM">EDM</option> <option value="Classical">Classical</option> <option value="Rhythm">Rhythm</option> <option value="Country">Country</option> </select> </div><div class="form-group"> <label for="date">Sub - Genre</label> <select data-placeholder="Choose Sub-Genre..." id="subgenre'+n+'" name="subgenre'+n+'"> <option hidden selected>Choose an Option</option> <option value="Jazz">Jazz</option> <option value="Hip Hop">Hip Hop</option> <option value="Rock">Rock</option> <option value="Pop">Folk</option> <option value="Blues">Blues</option> <option value="Heavy Metal">Heavy Metal</option> <option value="EDM">EDM</option> <option value="Classical">Classical</option> <option value="Rhythm">Rhythm</option> <option value="Country">Country</option> </select> </div><label for="details">Other Details</label> <div id="sel'+n+'" class="form-group row justify-centent-center" style="padding-left: 25px;padding-bottom:30px;" > <select id="options'+n+'" class="col-6" onchange="changeID(this.value);"> <option disabled selected>Choose an option</option> <option id="lycrist'+n+'" value="lycrist'+n+'">Lycrist</option> <option id="composer'+n+'" value="composer'+n+'">Composer</option> <option id="mixing'+n+'" value="mixing'+n+'">Mixing</option> <option id="mastering'+n+'" value="mastering'+n+'">Mastering</option> <option id="artwork'+n+'" value="artwork'+n+'">Artwork Credits</option> <option id="producer'+n+'" value="producer'+n+'">Financial Producer</option> <option id="vocalist'+n+'" value="vocalist'+n+'">Vocalist</option> <option id="studio'+n+'" value="studio'+n+'">Recording Studio</option> </select> <br></div><div class="form-group"> <label for="date">Caller Ringback Tune (CRB)</label> <div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 1</label> <input type="number" class="form-control" id="crb1h'+n+'" name="crb1h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb1m'+n+'" name="crb1m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb1s'+n+'" name="crb1s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div><div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 2</label> <input type="number" class="form-control" id="crb2h'+n+'" name="crb2h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb2m'+n+'" name="crb2m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb2s'+n+'" name="crb2s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div><div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 3</label> <input type="number" class="form-control" id="crb3h'+n+'" name="crb3h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb3m'+n+'" name="crb3m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb3s'+n+'" name="crb3s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div></div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="masteringc'+n+'" name="masteringc'+n+'"> <label class="form-check-label" for="masteringc'+n+'">Check this box if you need Mastering for your Song</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="mixingc'+n+'" name="mixingc'+n+'"> <label class="form-check-label" for="mixingc'+n+'">Check this box if you need Mixing for your Song</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="instrumentalc'+n+'" name="instrumentalc'+n+'"> <label class="form-check-label" for="instrumentalc'+n+'">Instrumental Song?</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="radioc'+n+'" name="radioc'+n+'"> <label class="form-check-label" for="radioc'+n+'">Check this box if the song is Radio cut</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="explicitc'+n+'" name="explicitc'+n+'"> <label class="form-check-label" for="explicitc'+n+'">Check this box if the song is Explicit</label> </div></div>';
+                        disp = '<div class="card card-body col-12 col-sm-5" style="padding: 20px;margin:20px;"> <div class="form-group"> <label for="artist">Song Name</label> <input type="text" class="form-control" id="trackn'+n+'" name="trackn'+n+'" placeholder="Track Name" required> </div><div class="form-group"> <label for="songfile">Song File</label> <input type="file" class="form-control-file" id="songfile'+n+'" name="songfile'+n+'" required > <small id="fileHelp" class="form-text text-muted">Note: Only WAV format is accepted of maximum size of 100mb</small> </div><div class="form-group"> <label for="albumart">Album Artwork</label> <input type="file" class="form-control-file" id="albumart'+n+'" name="albumart'+n+'" required > <small id="albumArtHelp" class="form-text text-muted">Note: Only JPG format with Square Ratio is accepted of maximum size of 50mb (Minimum Resolution: 1500x1500)</small> </div><br><div class="form-group"> <label for="lang">Language</label> <select id="lang'+n+'" name="lang'+n+'" data-placeholder="Choose a Language..." required> <option hidden selected value="">Choose an Option</option> <option value="Afrikaans">Afrikaans</option> <option value="Albanian">Albanian</option> <option value="Arabic">Arabic</option> <option value="Armenian">Armenian</option> <option value="Basque">Basque</option> <option value="Bengali">Bengali</option> <option value="Bulgarian">Bulgarian</option> <option value="Catalan">Catalan</option> <option value="Cambodian">Cambodian</option> <option value="Chinese (Mandarin)">Chinese (Mandarin)</option> <option value="Croatian">Croatian</option> <option value="Czech">Czech</option> <option value="Danish">Danish</option> <option value="Dutch">Dutch</option> <option value="English">English</option> <option value="Estonian">Estonian</option> <option value="Fiji">Fiji</option> <option value="Finnish">Finnish</option> <option value="French">French</option> <option value="Georgian">Georgian</option> <option value="German">German</option> <option value="Greek">Greek</option> <option value="Gujarati">Gujarati</option> <option value="Hebrew">Hebrew</option> <option value="Hindi">Hindi</option> <option value="Hungarian">Hungarian</option> <option value="Icelandic">Icelandic</option> <option value="Indonesian">Indonesian</option> <option value="Irish">Irish</option> <option value="Italian">Italian</option> <option value="Japanese">Japanese</option> <option value="Javanese">Javanese</option> <option value="Korean">Korean</option> <option value="Latin">Latin</option> <option value="Latvian">Latvian</option> <option value="Lithuanian">Lithuanian</option> <option value="Macedonian">Macedonian</option> <option value="Malay">Malay</option> <option value="Malayalam">Malayalam</option> <option value="Maltese">Maltese</option> <option value="Maori">Maori</option> <option value="Marathi">Marathi</option> <option value="Mongolian">Mongolian</option> <option value="Nepali">Nepali</option> <option value="Norwegian">Norwegian</option> <option value="Persian">Persian</option> <option value="Polish">Polish</option> <option value="Portuguese">Portuguese</option> <option value="Punjabi">Punjabi</option> <option value="Quechua">Quechua</option> <option value="Romanian">Romanian</option> <option value="Russian">Russian</option> <option value="Samoan">Samoan</option> <option value="Serbian">Serbian</option> <option value="Slovak">Slovak</option> <option value="Slovenian">Slovenian</option> <option value="Spanish">Spanish</option> <option value="Swahili">Swahili</option> <option value="Swedish ">Swedish </option> <option value="Tamil">Tamil</option> <option value="Tatar">Tatar</option> <option value="Telugu">Telugu</option> <option value="Thai">Thai</option> <option value="Tibetan">Tibetan</option> <option value="Tonga">Tonga</option> <option value="Turkish">Turkish</option> <option value="Ukrainian">Ukrainian</option> <option value="Urdu">Urdu</option> <option value="Uzbek">Uzbek</option> <option value="Vietnamese">Vietnamese</option> <option value="Welsh">Welsh</option> <option value="Xhosa">Xhosa</option> </select> </div><div class="form-group"> <label for="date">Date of Release</label> <input type="date" class="form-control" id="date'+n+'" name="date'+n+'" required> </div><div class="form-group"> <label for="date">Genre</label> <select data-placeholder="Choose a Genre..." id="genre'+n+'" name="genre'+n+'" required> <option hidden selected value="">Choose an Option</option> <option value="Jazz">Jazz</option> <option value="Hip Hop">Hip Hop</option> <option value="Rock">Rock</option> <option value="Pop">Folk</option> <option value="Blues">Blues</option> <option value="Heavy Metal">Heavy Metal</option> <option value="EDM">EDM</option> <option value="Classical">Classical</option> <option value="Rhythm">Rhythm</option> <option value="Country">Country</option> </select> </div><div class="form-group"> <label for="date">Sub - Genre</label> <select data-placeholder="Choose Sub-Genre..." id="subgenre'+n+'" name="subgenre'+n+'" required> <option hidden selected value="">Choose an Option</option> <option value="Jazz">Jazz</option> <option value="Hip Hop">Hip Hop</option> <option value="Rock">Rock</option> <option value="Pop">Folk</option> <option value="Blues">Blues</option> <option value="Heavy Metal">Heavy Metal</option> <option value="EDM">EDM</option> <option value="Classical">Classical</option> <option value="Rhythm">Rhythm</option> <option value="Country">Country</option> </select> </div><label for="details">Other Details</label> <div id="sel'+n+'" class="form-group row justify-centent-center" style="padding-left: 25px;padding-bottom:30px;" > <select id="options'+n+'" class="col-6" onchange="changeID(this.value);"> <option disabled selected>Choose an option</option> <option id="lycrist'+n+'" value="lycrist'+n+'">Lycrist</option> <option id="composer'+n+'" value="composer'+n+'">Composer</option> <option id="mixing'+n+'" value="mixing'+n+'">Mixing</option> <option id="mastering'+n+'" value="mastering'+n+'">Mastering</option> <option id="artwork'+n+'" value="artwork'+n+'">Artwork Credits</option> <option id="producer'+n+'" value="producer'+n+'">Financial Producer</option> <option id="vocalist'+n+'" value="vocalist'+n+'">Vocalist</option> <option id="studio'+n+'" value="studio'+n+'">Recording Studio</option> </select> <br></div><div class="form-group"> <label for="date">Caller Ringback Tune (CRB)</label> <div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 1</label> <input type="number" class="form-control" id="crb1h'+n+'" name="crb1h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb1m'+n+'" name="crb1m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb1s'+n+'" name="crb1s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div><div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 2</label> <input type="number" class="form-control" id="crb2h'+n+'" name="crb2h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb2m'+n+'" name="crb2m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb2s'+n+'" name="crb2s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div><div class="form-group row" style="margin-top: 5px;"> <label class="col-3" >CRB 3</label> <input type="number" class="form-control" id="crb3h'+n+'" name="crb3h'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="HH">: <input type="number" class="form-control" id="crb3m'+n+'" name="crb3m'+n+'" style="margin: -5px 2px;width:12%;padding:3px !important" placeholder="MM">: <input type="number" class="form-control" id="crb3s'+n+'" name="crb3s'+n+'" style="margin: -5px 2px;width:12%;padding:5px !important" placeholder="SS"> </div></div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="masteringc'+n+'" name="masteringc'+n+'"> <label class="form-check-label" for="masteringc'+n+'">Check this box if you need Mastering for your Song</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="mixingc'+n+'" name="mixingc'+n+'"> <label class="form-check-label" for="mixingc'+n+'">Check this box if you need Mixing for your Song</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="instrumentalc'+n+'" name="instrumentalc'+n+'"> <label class="form-check-label" for="instrumentalc'+n+'">Instrumental Song?</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="radioc'+n+'" name="radioc'+n+'"> <label class="form-check-label" for="radioc'+n+'">Check this box if the song is Radio cut</label> </div><div class="form-group form-check"> <input type="checkbox" class="form-check-input" id="explicitc'+n+'" name="explicitc'+n+'"> <label class="form-check-label" for="explicitc'+n+'">Check this box if the song is Explicit</label> </div></div>';
                         $("#list").append(disp);
                     }
                 }
@@ -454,6 +459,7 @@ session_start();
                 }
             </script>
             <script>
+                var up=0;
                 const upload_success = window.createNotification({
                     closeOnClick: true,
                     displayCloseButton: true,
@@ -491,61 +497,76 @@ session_start();
                     var formData = new FormData;
                     for(var i=1;i<=total;i++){
                         formData.append('songfile' + i, $('#songfile' + i)[0].files[0]);
+                        if($('#songfile' + i).val() == ''){
+                            alert('Please Select a File!');
+                            return;
+                        }
                         // alert($('#songfile' + i)[0].files[0]['name']);
                         formData.append('albumart' + i, $('#albumart' + i)[0].files[0]);
+                        if($('#albumart' + i).val() == ''){
+                            alert('Please Select a File!');
+                            return;
+                        }
                         // alert($('#albumart' + i)[0].files[0]['name']);
                     }
-                    $('#btn').attr('disabled', 'disabled');
+                    // $('#btn').attr('disabled', 'disabled');
                     $('.msg').text('Uploading in progress...');
-                    $.ajax({
-                        url: 'upload.php',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        type: 'POST',
-                        // this part is progress bar
-                        xhr: function () {
-                            var xhr = new window.XMLHttpRequest();
-                            xhr.upload.addEventListener("progress", function (evt) {
-                                if (evt.lengthComputable) {
-                                    var percentComplete = evt.loaded / evt.total;
-                                    percentComplete = parseInt(percentComplete * 100);
-                                    $('.myprogress').text(percentComplete + '%');
-                                    $('.myprogress').css('width', percentComplete + '%');
+                    if(up!=1){
+                        $.ajax({
+                            url: 'upload.php',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            type: 'POST',
+                            // this part is progress bar
+                            xhr: function () {
+                                var xhr = new window.XMLHttpRequest();
+                                xhr.upload.addEventListener("progress", function (evt) {
+                                    if (evt.lengthComputable) {
+                                        var percentComplete = evt.loaded / evt.total;
+                                        percentComplete = parseInt(percentComplete * 100);
+                                        $('.myprogress').text(percentComplete + '%');
+                                        $('.myprogress').css('width', percentComplete + '%');
+                                    }
+                                }, false);
+                                return xhr;
+                            },
+                            success: function (data) {
+                                // console.log(data);
+                                var flag=0;
+                                var data1 = data.split('\n');
+                                data1.pop();
+                                data1.forEach(element => {
+                                    if(element[0] == '1'){
+                                        upload_success({
+                                            title: 'File Uploaded',
+                                            message: element.substring(1),
+                                        });
+                                    }else{
+                                        upload_failed({
+                                            title: 'File Upload Failed',
+                                            message: element.substring(1),
+                                        });
+                                        flag=1;
+                                    }
+                                });
+                                if(flag == 0){
+                                    $('.msg').text("All files Uploaded Successfully!");
+                                    setTimeout(() => {
+                                        // $('#form').submit();
+                                        up = 1;
+                                        $('#subButton').click();
+                                    }, 2000);
                                 }
-                            }, false);
-                            return xhr;
-                        },
-                        success: function (data) {
-                            // console.log(data);
-                            var flag=0;
-                            var data1 = data.split('\n');
-                            data1.pop();
-                            data1.forEach(element => {
-                                if(element[0] == '1'){
-                                    upload_success({
-                                        title: 'File Uploaded',
-                                        message: element.substring(1),
-                                    });
-                                }else{
-                                    upload_failed({
-                                        title: 'File Upload Failed',
-                                        message: element.substring(1),
-                                    });
-                                    flag=1;
-                                }
-                            });
-                            if(flag == 0){
-                                $('.msg').text("All files Uploaded Successfully!");
-                                setTimeout(() => {
-                                    $('#form').submit();
-                                }, 3000);
+                                else
+                                    $('.msg').text("Partially Uploaded due to some Error");
+                                $('#btn').removeAttr('disabled');
                             }
-                            else
-                                $('.msg').text("Partially Uploaded due to some Error");
-                            $('#btn').removeAttr('disabled');
-                        }
-                    });
+                        });
+                    }
+                    else{
+                        $('.msg').text("Please Fill the required details above!");
+                    }
                 };
             </script>
     </body>
