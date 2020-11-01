@@ -187,7 +187,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 						</div>
 
 						<div>
-							<div class="box" style="height: 110vh;">
+							<div class="box" style="height: auto;">
 								<div class="image fit">
 									<img src="images/pic02.jpg" alt="" />
 								</div>
