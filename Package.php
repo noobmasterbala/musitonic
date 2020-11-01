@@ -29,7 +29,7 @@ session_start();
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html"><img src="images/logo.png" height="50" width="50"></a></div>
+				<div class="logo"><a href="index.php"><img src="images/logo.png" height="50" width="50"></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 

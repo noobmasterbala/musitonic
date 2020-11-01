@@ -225,7 +225,7 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 				</div>
 			</section> -->
 			<section>
-			<div class="container align-center" style="padding: 100px 100px;">
+			<div class="container align-center row justify-content-center" style="margin: auto auto;">
             <h1 style="color:black !important;text-align:left !important;font-size:30px;">Login / Register:</h1>
 			<?php
                 if(!isset($_SESSION['userid'])){
@@ -250,8 +250,8 @@ An absolute solution for independent artists, songwriters and Musicians.</p>
 					  }
 					  
                   
-                echo ' <form id="login_form" action="assets/includes/login.inc.php" method="post">
-					<input type="email" name="mailuid" id="email" placeholder="Email" required><br><br>
+                echo ' <form id="login_form" class="col-10" action="assets/includes/login.inc.php" method="post">
+					<input type="email" name="mailuid" id="email" placeholder="Email" required><br>
 					<input type="password" name="pwd" id="password" placeholder="Password" required><br><br>
                     <button type="submit" name="login-submit" class="button">Login</button>
                     <a href="assets/php/register.php" class="button">Register</a>
