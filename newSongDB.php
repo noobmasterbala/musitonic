@@ -1,11 +1,7 @@
 <?php
     require('./assets/includes/db_connect.php');
-    foreach($_REQUEST as $key => $value){
-        echo $key;
-        echo ":";
-        echo $value;
-        echo "<br>";
-        $n=1;
+    for($n=1;$n<=$_REQUEST['n'];$n++){
+        //$n=1;
         $albumname = $_REQUEST['albumname'];
         $track = $_REQUEST['trackn'.$n];
         $songfile = $_REQUEST['songfile'.$n];
@@ -22,10 +18,15 @@
         $mixing = $_REQUEST['mixing'.$n];
         $composer = $_REQUEST['composer'.$n];
         $lyricist = $_REQUEST['lycrist'.$n];
-        $crb1 = $_REQUEST['crb1h'.$n].$_REQUEST['crb1m'.$n].$_REQUEST['crb1m'.$n];
-        $crb2 = $_REQUEST['crb2h'.$n].$_REQUEST['crb2m'.$n].$_REQUEST['crb2m'.$n];
-        $crb3 = $_REQUEST['crb3h'.$n].$_REQUEST['crb3m'.$n].$_REQUEST['crb3m'.$n];
-        $query1 = "INSERT INTO `test`( `albumname`, `trackname`, `songname`, `language`, `date`, `genre`, `subgenre`, `studio`, `vocalist`, `producer`, `artworkcredits`, `mastering`, `mixing`, `composer`, `lyricist`, `crb1`, `crb2`, `crb3`, `masteringcheck`, `mixingcheck`, `instrumentalcheck`, `radiocheck`, `explicitcheck`) VALUES ('$albumname','$track','$songfile','$lang','$date','$genre','$subgenre','$studio','$vocalist','$producer','$artwork','$mastering','$mixing','$composer','$lyricist','$crb1','crb2','crb3','masteringcheck','mixingcheck','instrumentalcheck','radiocheck','explicitcheck')";
+        $crb1 = $_REQUEST['crb1h'.$n].':'.$_REQUEST['crb1m'.$n].':'.$_REQUEST['crb1m'.$n];
+        $crb2 = $_REQUEST['crb2h'.$n].':'.$_REQUEST['crb2m'.$n].':'.$_REQUEST['crb2m'.$n];
+        $crb3 = $_REQUEST['crb3h'.$n].':'.$_REQUEST['crb3m'.$n].':'.$_REQUEST['crb3m'.$n];
+        $mastc = $_REQUEST['masteringc'.$n];
+        $mixinc = $_REQUEST['mixingc'.$n];
+        $instruc = $_REQUEST['instrumentalc'.$n];
+        $radioc = $_REQUEST['radioc'.$n];
+        $explic = $_REQUEST['explicitc'.$n];
+        $query1 = "INSERT INTO `test`( `albumname`, `trackname`, `songname`, `language`, `date`, `genre`, `subgenre`, `studio`, `vocalist`, `producer`, `artworkcredits`, `mastering`, `mixing`, `composer`, `lyricist`, `crb1`, `crb2`, `crb3`, `masteringcheck`, `mixingcheck`, `instrumentalcheck`, `radiocheck`, `explicitcheck`) VALUES ('$albumname','$track','$songfile','$lang','$date','$genre','$subgenre','$studio','$vocalist','$producer','$artwork','$mastering','$mixing','$composer','$lyricist','$crb1','$crb2','$crb3','$mastc','$mixinc','$instruc','$radioc','$explic')";
         $result = $conn->query($query1) or die($conn->error);
     }
     // $query1 = "SELECT COUNT(*) FROM `enrolled` WHERE `online`=1 AND `classid`='$scode'";
