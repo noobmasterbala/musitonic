@@ -84,7 +84,7 @@ session_start();
 					</header>
 				</div>
 			</section>
-			<div class="pricing-wrapper clearfix" style="height: 120vh;">
+			<div class="pricing-wrapper clearfix" style="height: auto;">
 				<!-- Titulo -->
 				<h1 class="pricing-table-title">Our Packages</h1>
 		
