@@ -1,5 +1,6 @@
 <?php
     require('./assets/includes/db_connect.php');
+    session_start();
     for($n=1;$n<=$_REQUEST['n'];$n++){
         //$n=1;
         $albumname = $_REQUEST['albumname'];
@@ -26,7 +27,9 @@
         $instruc = $_REQUEST['instrumentalc'.$n];
         $radioc = $_REQUEST['radioc'.$n];
         $explic = $_REQUEST['explicitc'.$n];
-        $query1 = "INSERT INTO `test`( `albumname`, `trackname`, `songname`, `language`, `date`, `genre`, `subgenre`, `studio`, `vocalist`, `producer`, `artworkcredits`, `mastering`, `mixing`, `composer`, `lyricist`, `crb1`, `crb2`, `crb3`, `masteringcheck`, `mixingcheck`, `instrumentalcheck`, `radiocheck`, `explicitcheck`) VALUES ('$albumname','$track','$songfile','$lang','$date','$genre','$subgenre','$studio','$vocalist','$producer','$artwork','$mastering','$mixing','$composer','$lyricist','$crb1','$crb2','$crb3','$mastc','$mixinc','$instruc','$radioc','$explic')";
+        $user = $_SESSION['username'];
+        $dateupload = date("Y-m-d");
+        $query1 = "INSERT INTO `uploads`( `username`,`albumname`, `trackname`, `songname`, `language`, `date`, `genre`, `subgenre`, `studio`, `vocalist`, `producer`, `artworkcredits`, `mastering`, `mixing`, `composer`, `lyricist`, `crb1`, `crb2`, `crb3`, `masteringcheck`, `mixingcheck`, `instrumentalcheck`, `radiocheck`, `explicitcheck`,`dateofupload`,`status`) VALUES ('$user','$albumname','$track','$songfile','$lang','$date','$genre','$subgenre','$studio','$vocalist','$producer','$artwork','$mastering','$mixing','$composer','$lyricist','$crb1','$crb2','$crb3','$mastc','$mixinc','$instruc','$radioc','$explic','$dateupload','Uploaded')";
         $result = $conn->query($query1) or die($conn->error);
     }
     // $query1 = "SELECT COUNT(*) FROM `enrolled` WHERE `online`=1 AND `classid`='$scode'";

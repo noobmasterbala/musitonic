@@ -365,7 +365,7 @@ if(!isset($_SESSION['username'])){
                                         <label class="form-check-label" for="authorize">CAPTCHA</label>
                                     </div><br> -->
                                     <br>
-                                    <button id="btn" class="btn btn-primary" onclick="upload();">Submit</button><br><br>
+                                    <div id="btn" class="btn btn-primary" onclick="upload();">Submit</div><br><br>
                                     <button type="submit" id="subButton" hidden></button>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-success myprogress" role="progressbar" style="width:0%">0%</div>
@@ -535,6 +535,7 @@ if(!isset($_SESSION['username'])){
                                 // console.log(data);
                                 var flag=0;
                                 var data1 = data.split('\n');
+                                var i=0;
                                 data1.pop();
                                 data1.forEach(element => {
                                     if(element[0] == '1'){
@@ -549,6 +550,7 @@ if(!isset($_SESSION['username'])){
                                         });
                                         flag=1;
                                     }
+                                    i++;
                                 });
                                 if(flag == 0){
                                     $('.msg').text("All files Uploaded Successfully!");
@@ -566,6 +568,7 @@ if(!isset($_SESSION['username'])){
                     }
                     else{
                         $('.msg').text("Please Fill the required details above!");
+                        $('#subButton').click();
                     }
                 };
             </script>
