@@ -9,7 +9,7 @@
             // Check if image file is a actual image or fake image
             $check = $filename["tmp_name"];
             $ext = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-            $allowed = array('wav');
+            $allowed = array('wav','jpg');
             if(in_array($ext,$allowed)) {
                 $uploadOk = 1;
                 if (move_uploaded_file($filename["tmp_name"], $target_file)) {
