@@ -1,5 +1,11 @@
 <?php
-session_start();
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+require './assets/includes/PHPMailer/Exception.php';
+require './assets/includes/PHPMailer/PHPMailer.php';
+require './assets/includes/PHPMailer/SMTP.php';
+require('./assets/includes/db_connect.php');
+SESSION_START();
 ?>
 
 
@@ -81,7 +87,36 @@ session_start();
 					<header class="align-center">
 						
 						<h2>Song Details have been Successfully Uploaded! You will be notified via E-Mail on further updates and Status. <br><br>Thank You!<br>For Any Queries <a href="mailto:query@musitonicstudios.in">Contact Us.</a></h2>
-					</header>
+                        <?php
+                            $u = $_SESSION['username'];
+                            $query = "SELECT `emailUsers` FROM `users` WHERE `uidUsers` = '$u'";
+                            $result = $conn->query($query) or die($conn->error);
+                            while(($row = $result->fetch_row()) !== null){
+                                $email=$row[0];
+                            }
+                            $mail = new PHPMailer;
+                            $mail->isSMTP();
+                            $mail->Host = 'smtp.zoho.in';
+                            $mail->SMTPAuth = true;
+                            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                            $mail->Port = 465;
+                            $mail->SMTPDebug = false;
+                            $mail->Username = 'noreply@musitonicstudios.in';
+                            $mail->Password = 'Roshan@2020';
+                            $mail->setFrom('noreply@musitonicstudios.in', 'Musitonic Studios');
+                            $mail->addReplyTo('noreply@musitonicstudios.in', 'Team');
+                            $mail->addAddress($email);
+                            $mail->Subject  =  'Song Uploaded';
+                            $mail->IsHTML(true);
+                            $mail->msgHTML('Hi,<br> Your song has been uploaded succesfully and is under processing. You will be notified via E-Mail on any status update.<br>Thank you for using Musitonic Studio\'s Services <br><br> Regards,<br>Team Musitonic Studios', __DIR__);
+                            if($mail->Send()){
+                                echo "Done";
+                            }
+                            else{
+                                echo "Mail Error - >".$mail->ErrorInfo;
+                            }
+                        ?>
+                    </header>
 				</div>
 			</section>
 			<div class="pricing-wrapper clearfix" style="height: 120vh;">

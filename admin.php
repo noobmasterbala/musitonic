@@ -1,5 +1,7 @@
 <?php
 session_start();
+if($_SESSION['username']!='Admin' || !isset($_SESSION['username']))
+    echo "<script>alert('Admin Page Only! If you are an Admin then login First!');window.location.replace('index.php');</script>";
 ?>
 
 
