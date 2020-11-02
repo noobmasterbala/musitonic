@@ -84,19 +84,38 @@ session_start();
 					</header>
 				</div>
 			</section>
-			<div class="pricing-wrapper clearfix" style="height: auto;">
-                <!-- Titulo -->
-                <h3>Uploaded Files:</h3>
-                <?php
-                    $dir = array_diff(scandir("uploads"), array('.', '..'));
-                    foreach($dir as $file){
-                        echo $file;
-                        echo " - <a href='uploads/$file' download>Download</a>";
-                        echo "<br>";
-                    }
-                ?>
-                <br>
-                <br>
+			<div class="row justify-content-center" style="height: auto;">
+                <div class="card col-12">
+                    <br>
+                    <h3 style="margin-left: 100px;">Uploaded Files:</h3>
+                    <div style="margin-left: 50px;">
+                    <?php
+                        $dir = array_diff(scandir("uploads"), array('.', '..'));
+                        foreach($dir as $file){
+                            echo $file;
+                            echo " - <a href='uploads/$file' download>Download</a>";
+                            echo "<br>";
+                        }
+                    ?>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                <div class="card col-12">
+                        <?php
+                        require('./assets/includes/db_connect.php');
+                            $query = "SELECT * FROM `uploads`";
+                            $result = $conn->query($query) or die($conn->error);
+                            
+                            echo "<table class='table' style='margin-left: 100px;width: 200px !important;border: 1px solid black'>";
+                            echo "<tr scope='row'><td>SNO</td><td>USERNAME</td><td>ALBUMNAME</td><td>TRACKNAME</td><td>SONGNAME</td><td>LANGUAGE</td><td>DATE</td><td>GENRE</td><td>SUBGENRE</td><td>STUDIO</td><td>VOCALIST</td><td>PRODUCER</td><td>ARTWORKCREDITS</td><td>MASTERING</td><td>MIXING</td><td>COMPOSER</td><td>LYRICIST</td><td>CRB1</td><td>CRB2</td><td>CRB3</td><td>MASTERING</td><td>MIXING</td><td>INSTRUMENTAL</td><td>RADIOCUT</td><td>EXPLICIT</td><td>DATEOFUPLOAD</td><td>STATUS</td></tr>";
+                            while($row = mysqli_fetch_array($result)){
+                                echo "<tr scope='row'><td>" . $row['sno'] . "</td><td>" . $row['username'] . "</td><td>" . $row['albumname'] . "</td><td>" . $row['trackname'] . "</td><td>" . $row['songname'] . "</td><td>" . $row['language'] . "</td><td>" . $row['date'] . "</td><td>" . $row['genre'] . "</td><td>" . $row['subgenre'] . "</td><td>" . $row['studio'] . "</td><td>" . $row['vocalist'] . "</td><td>" . $row['producer'] . "</td><td>" . $row['artworkcredits'] . "</td><td>" . $row['mastering'] . "</td><td>" . $row['mixing'] . "</td><td>" . $row['composer'] . "</td><td>" . $row['lyricist'] . "</td><td>" . $row['crb1'] . "</td><td>" . $row['crb2'] . "</td><td>" . $row['crb3'] . "</td><td>" . $row['masteringcheck'] . "</td><td>" . $row['mixingcheck'] . "</td><td>" . $row['instrumentalcheck'] . "</td><td>" . $row['radiocheck'] . "</td><td>" . $row['explicitcheck'] . "</td><td>" . $row['dateofupload'] . "</td><td>" . $row['status'] . "</td></tr>";
+                            }
+                            
+                            echo "</table>";
+                        ?>
+                </div>
 			</div>
                 
 
